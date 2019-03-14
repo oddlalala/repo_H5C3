@@ -1,0 +1,49 @@
+.go{
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	border-radius: 50%;
+	z-index: 1001;
+}
+.more{
+	position: fixed;
+	right: 40px;
+	bottom: 80px;
+	z-index: 1001;
+}
+#container > #fullpage > .screen01{
+	background: url(../images/01-bg.png) no-repeat center bottom;
+}
+#container > #fullpage .content{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -450px;
+	width: 900px;
+	height: 600px;
+	background: rgba(0,0,0,.1);
+}
+#container > #fullpage > .screen01 > .content > .goods{
+	text-align: center;
+	margin-top: 230px;
+}
+#container > #fullpage > .screen01 > .content > .fly{
+	position: absolute;
+	top: 20px;
+	right: -50px;
+	animation: ani_fly .8s linear infinite alternate;
+}
+#container > #fullpage > .screen01 > .content > .sofa{
+	position: absolute;
+	top: 150px;
+	left: 230px;
+	animation: ani_fly .6s linear infinite alternate;
+}
+@keyframes ani_fly{
+	from{transform: translateY(-10px);}
+	to{transform: translateY(10px);}
+}
+/*-----------------------------------------------------------------------------------------------*/
+#container > #fullpage > .screen02{
+	background: url(../images/02-bg.png) no-repeat center bottom;
+}

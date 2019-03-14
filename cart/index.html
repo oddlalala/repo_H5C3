@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/jquery.fullpage.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div id="container">
+		<a href="#" class="go"><img src="images/00-go.png" alt="直接进入购物中心"></a>
+		<a href="#" class="more"><img src="images/00-more.png" alt="继续往下（更多精彩）"></a>
+		<div id="fullpage">
+	        <div class="section screen01">第壹屏
+				<div class="content">
+					<div class="goods"><img src="images/01-goods.png" alt=""></div>
+					<div class="fly"><img src="images/01-fly.png" alt=""></div>
+					<div class="sofa"><img src="images/01-sofa.png" alt=""></div>
+				</div>
+	        </div>
+	        <div class="section screen02">第贰屏
+				<div class="content">
+					<div class="text">
+		                <img class="text01" src="images/02-text1.png" alt="">
+		                <img class="text02" src="images/02-text2.png" alt="">
+		            </div>
+		            <div class="input">
+		                <img class="search" src="images/02-search.png" alt="">
+		                <img class="key" src="images/02-key.png" alt="">
+		            </div>
+		            <div class="goods"><img src="images/02-goods.png" alt=""></div>
+				</div>
+	        </div>
+	        <div class="section screen03">第叁屏</div>
+	        <div class="section screen04">第肆屏</div>
+	        <div class="section screen05">第伍屏</div>
+	        <div class="section screen06">第陆屏</div>
+	        <div class="section screen07">第柒屏</div>
+	        <div class="section screen08">第捌屏</div>
+	    </div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fullpage.js"></script>
+	<script>
+		$(function(){
+			$('#fullpage').fullpage({
+				verticalCentered: false,
+				navigation: true,
+				sectionsColor: ["#fadd67", "#84a2d4", "#ef674d", "#ffeedd", "#d04759", "#84d9ed", "#8ac060"],
+				afterLoad: function(anchorLink,index){
+					console.log(index-1);
+				}
+			});
+		});
+	</script>
+	<script src="js/index.js"></script>
+</body>
+</html>
