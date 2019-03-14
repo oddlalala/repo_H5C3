@@ -47,3 +47,34 @@
 #container > #fullpage > .screen02{
 	background: url(../images/02-bg.png) no-repeat center bottom;
 }
+#container > #fullpage > .screen02 > .content > .text{
+	text-align: center;
+}
+#container > #fullpage > .screen02 > .content > .text > .text02{
+	position: absolute;
+	opacity: 0;
+}
+#container > #fullpage > .screen02 > .content > .input{
+	position: absolute;
+	top: 120px;
+	right: 171px;
+	transform: scale(.7);
+	transform-origin: right top;
+}
+#container > #fullpage > .screen02 > .content > .input > .key{
+	position: absolute;
+    left: 100px;
+    top: 4px;
+}
+#container > #fullpage > .screen02 > .content > .goods{
+	position: absolute;
+    left: 50%;
+    margin-left: -220px;
+    bottom: 210px;
+}
+#container > #fullpage > .screen02 > .content > .sofa{
+	transform: scale(0.5);
+    position: absolute;
+    left: 292px;
+    top: 132px;
+}
