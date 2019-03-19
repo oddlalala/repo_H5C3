@@ -1,3 +1,8 @@
+/*下面的屏比上面的屏层级高*/
+/*显示隐藏不需要用transition的用display:none;*/
+/*div绝对定位，一张图片隐藏一张图片显示，切换的时候那张隐藏的图片要position:static;*/
+/*父元素宽度100%、text-align:center;里面的行内元素相对于父元素的父元素居中（前提子元素不脱离文档流，父元素、子元素都脱离文档流的情况下，相当于left:50%;）*/
+/*上面的兄弟元素absolute，下面的兄弟元素会顶上来；上面的兄弟元素static，下面的兄弟元素absolute，不指定left、top的情况下不会顶上来*/
 .go{
 	position: fixed;
 	top: 30px;
@@ -43,7 +48,7 @@
 	from{transform: translateY(-10px);}
 	to{transform: translateY(10px);}
 }
-/*-----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------screen02---------------------------------------------------------*/
 #container > #fullpage > .screen02{
 	background: url(../images/02-bg.png) no-repeat center bottom;
 }
@@ -58,23 +63,146 @@
 	position: absolute;
 	top: 120px;
 	right: 171px;
-	transform: scale(.7);
 	transform-origin: right top;
+	opacity: 0;
 }
 #container > #fullpage > .screen02 > .content > .input > .key{
 	position: absolute;
     left: 100px;
     top: 4px;
+    opacity: 0;
 }
 #container > #fullpage > .screen02 > .content > .goods{
 	position: absolute;
     left: 50%;
     margin-left: -220px;
     bottom: 210px;
+    transform: scale(0);
+    transform-origin: right bottom;
 }
-#container > #fullpage > .screen02 > .content > .sofa{
+#container > #fullpage > .screen02 > .content > .goods > .sofa{
 	transform: scale(0.5);
     position: absolute;
-    left: 292px;
-    top: 132px;
+    left: 62px;
+    top: -35px;
+}
+#container > #fullpage > .screen02.now > .content > .text > .text02{
+	position: static;
+	opacity: 1;
+}
+#container > #fullpage > .screen02.now > .content > .text > .text01{
+	display: none;
+}
+#container > #fullpage > .screen02.now > .content > .input{
+	animation: ani_input 3s forwards;
+}
+#container > #fullpage > .screen02.now > .content > .input > .key{
+	opacity: 1;
+	transition: opacity 1s linear 1s;
+}
+@keyframes ani_input{
+	from{
+		opacity: 1;
+		transform: translate(2000px,135px);
+	}
+	33%{
+		opacity: 1;
+		transform: translate(-150px,135px);
+	}
+	67%{
+		opacity: 1;
+		transform: translate(-150px,135px);
+	}
+	to{
+		opacity: 1;
+		transform: scale(.7);
+	}
+}
+#container > #fullpage > .screen02.now > .content > .goods{
+	transform: none;
+	transition: transform 1s linear 2s;
+}
+#container > #fullpage > .screen02 > .content > .goods > .sofa.leaving02{
+	z-index: 1001;
+	transform: translate(-81px,800px); /* 覆盖scale(.5) */
+	transition: transform 1s;
+}
+/*--------------------------------------------------screen03-----------------------------------------------------*/
+#container > #fullpage > .screen03{
+	background: url(../images/03-bg.png) no-repeat center bottom;
+}
+#container > #fullpage > .screen03 > .content > .choices{
+	position: absolute;
+	left: 489px;
+	top: 304px;
+}
+#container > #fullpage > .screen03 > .content > .choices > img:last-child{
+ 	display: none;
+}
+#container > #fullpage > .screen03 > .content > .cart{
+	position: absolute;
+	left: 489px;
+	top: 440px;
+}
+/*----------------------display:none;显示隐藏-----------------------*/
+#container > #fullpage > .screen03 > .content > .cart > img:last-child{
+ 	display: none;
+}
+#container > #fullpage > .screen03.now > .content > .choices > img:first-child{
+ 	display: none;
+}
+#container > #fullpage > .screen03.now > .content > .choices > img:last-child{
+ 	display: inline-block;
+}
+#container > #fullpage > .screen03.now > .content > .cart > img:first-child{
+ 	display: none;
+}
+#container > #fullpage > .screen03.now > .content > .cart > img:last-child{
+ 	display: inline-block;
+}
+/*----------------------------显示隐藏------------------------------*/
+#container > #fullpage > .screen03 > .content > .goods > .sofa.leaving03{
+
+}
+/*------------------------------------------------screen04---------------------------------------------------------------*/
+#container > #fullpage > .screen04{
+	background: url(../images/04-bg.png) no-repeat center bottom;
+}
+#container > #fullpage > .screen04 > .content > .clouds{
+ 	position: absolute;
+ 	top: -50px;
+ 	animation: ani_clouds 40s linear infinite alternate;
+}
+@keyframes ani_clouds{
+	from{
+		transform: translateX(-500px);
+	}
+	to{
+		transform: translateX(500px);
+	}
+}
+/*-----------------opacity:0;显示隐藏---------------------*/
+#container > #fullpage > .screen04 > .content > .text{
+	text-align: center;
+	margin-top: 100px;
+	opacity: 0;
+}
+#container > #fullpage > .screen04 > .content > .text > img:first-child{
+ 	position: absolute;
+}
+/*------------------------显示隐藏------------------------*/
+#container > #fullpage > .screen04 > .content > .realcart{
+	position: absolute;
+	left: 50%;
+	margin-top: 68px;
+	transform: translateX(-50%);
+}
+#container > #fullpage > .screen04 > .content > .address{
+	position: relative;
+	text-align: center;
+	margin-top: 30px;
+	opacity: 0;
+}
+#container > #fullpage > .screen04 > .content > .address > img:first-child{
+ 	position: absolute;
 }

@@ -28,13 +28,43 @@
 		                <img class="search" src="images/02-search.png" alt="">
 		                <img class="key" src="images/02-key.png" alt="">
 		            </div>
-		            <div class="goods"><img src="images/02-goods.png" alt=""></div>
-		            <div class="sofa"><img src="images/02-sofa.png" alt=""></div>
+		            <div class="goods">
+		            	<img src="images/02-goods.png" alt="">
+						<img  class="sofa" src="images/02-sofa.png" alt="">
+		            </div>
 				</div>
 	        </div>
-	        <div class="section screen03">第叁屏</div>
-	        <div class="section screen04">第肆屏</div>
-	        <div class="section screen05">第伍屏</div>
+	        <div class="section screen03">第叁屏
+				<div class="content">
+					<div class="choices">
+						<img src="images/03-change01.gif" alt="">
+						<img src="images/03-change02.gif" alt="">
+					</div>
+					<div class="cart">
+						<img src="images/03-cart01.gif" alt="">
+						<img src="images/03-cart02.gif" alt="">
+					</div>
+				</div>
+	        </div>
+	        <div class="section screen04">第肆屏
+				<div class="content">
+					<div class="clouds"><img src="images/04-cloud.png" alt=""></div>
+					<div class="text">
+						<img src="images/04-text01.png" alt="">
+						<img src="images/04-text02.png" alt="">
+					</div>
+					<div class="realcart"><img src="images/04-cart.png" alt=""></div>
+					<div class="address">
+						<img src="images/04-address02.png" alt="">
+						<img src="images/04-address01.png" alt="">
+					</div>
+				</div>
+	        </div>
+	        <div class="section screen05">第伍屏
+				<div class="content">
+					
+				</div>
+	        </div>
 	        <div class="section screen06">第陆屏</div>
 	        <div class="section screen07">第柒屏</div>
 	        <div class="section screen08">第捌屏</div>
@@ -48,12 +78,26 @@
 				verticalCentered: false,
 				navigation: true,
 				sectionsColor: ["#fadd67", "#84a2d4", "#ef674d", "#ffeedd", "#d04759", "#84d9ed", "#8ac060"],
+				scrollingSpeed: 1000,
 				afterLoad: function(anchorLink,index){
-					console.log(index-1);
+					$("#container > #fullpage > .section").eq(index-1).addClass("now");
 				},
 				afterRender: function(){
-					$("#container > .more").fullpage().moveSectionDown();
+					$("#container > .more").on("click",function(){
+						$.fn.fullpage.moveSectionDown();
+					});
+				},
+				onLeave: function(index,nextIndex,direction){
+					// $("#container > #fullpage > .section").eq(index-1).removeClass("now");
+					if (index == 2 && nextIndex == 3) {
+						$("#container > #fullpage > .screen02 > .content > .goods > .sofa").addClass("leaving02");
+					}else if (index == 3 && nextIndex == 4) {
+						$("#container > #fullpage > .screen03 > .content > .goods > .sofa").addClass("leaving03");
+						
+					}
+
 				}
+
 			});
 		});
 	</script>
