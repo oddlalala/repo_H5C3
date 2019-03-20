@@ -36,6 +36,7 @@
 	        </div>
 	        <div class="section screen03">第叁屏
 				<div class="content">
+					<div class="sofa"><img src="images/02-sofa.png" alt=""></div>
 					<div class="choices">
 						<img src="images/03-change01.gif" alt="">
 						<img src="images/03-change02.gif" alt="">
@@ -54,6 +55,7 @@
 						<img src="images/04-text02.png" alt="">
 					</div>
 					<div class="realcart"><img src="images/04-cart.png" alt=""></div>
+					<div class="sofa"><img src="images/04-sofa.png" alt=""></div>
 					<div class="address">
 						<img src="images/04-address02.png" alt="">
 						<img src="images/04-address01.png" alt="">
@@ -62,10 +64,30 @@
 	        </div>
 	        <div class="section screen05">第伍屏
 				<div class="content">
-					
+					<div class="text"><img src="images/05-text.png" alt=""></div>
+					<div class="sofa"><img src="images/04-sofa.png" alt=""></div>
+					<div class="card">
+						<img src="images/05-card.png" alt="">
+						<img src="images/05-order.png" alt="">
+						<img src="images/04-sofa.png" alt="">
+					</div>
+					<div class="mouse">
+						<img src="images/05-mouse01.png" alt="">
+						<img src="images/05-mouse02.png" alt="">
+					</div>
+					<div class="hand"><img src="images/05-hand.png" alt=""></div>
 				</div>
 	        </div>
-	        <div class="section screen06">第陆屏</div>
+	        <div class="section screen06 active">第陆屏
+				<div class="content">
+					<div class="clouds01"><img src="images/06-cloud01.png" alt=""></div>
+					<div class="clouds02"><img src="images/06-cloud02.png" alt=""></div>
+					<div class="text">
+						<img src="images/06-text01.png" alt="">
+						<img src="images/06-text02.png" alt="">
+					</div>
+				</div>
+	        </div>
 	        <div class="section screen07">第柒屏</div>
 	        <div class="section screen08">第捌屏</div>
 	    </div>
@@ -86,17 +108,29 @@
 					$("#container > .more").on("click",function(){
 						$.fn.fullpage.moveSectionDown();
 					});
+					$(".screen03 .sofa").on("transitionend",function(){
+						$(this).hide();
+					});
+					$(".screen04 .realcart").on("transitionend",function(){
+						$(".screen04 > .content").addClass("show");
+					});
+					$(".screen05 .hand").on("transitionend",function(){
+						$(".screen05  .mouse").addClass("show");
+					});
 				},
 				onLeave: function(index,nextIndex,direction){
 					// $("#container > #fullpage > .section").eq(index-1).removeClass("now");
 					if (index == 2 && nextIndex == 3) {
 						$("#container > #fullpage > .screen02 > .content > .goods > .sofa").addClass("leaving02");
+						$(".screen02 .sofa.leaving02").on("transitionend",function(){
+							$(".screen03 .sofa").css("opacity",1);
+						});
 					}else if (index == 3 && nextIndex == 4) {
-						$("#container > #fullpage > .screen03 > .content > .goods > .sofa").addClass("leaving03");
-						
-					}
+						$("#container > #fullpage > .screen03 > .content > .sofa").addClass("leaving03");
 
+					}
 				}
+				
 
 			});
 		});

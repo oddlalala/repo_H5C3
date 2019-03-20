@@ -3,6 +3,8 @@
 /*div绝对定位，一张图片隐藏一张图片显示，切换的时候那张隐藏的图片要position:static;*/
 /*父元素宽度100%、text-align:center;里面的行内元素相对于父元素的父元素居中（前提子元素不脱离文档流，父元素、子元素都脱离文档流的情况下，相当于left:50%;）*/
 /*上面的兄弟元素absolute，下面的兄弟元素会顶上来；上面的兄弟元素static，下面的兄弟元素absolute，不指定left、top的情况下不会顶上来*/
+/*对同一元素使用多次transform，会覆盖*/
+/*translate元素移走后还会在文档流中占有原来的位置*/
 .go{
 	position: fixed;
 	top: 30px;
@@ -131,6 +133,13 @@
 #container > #fullpage > .screen03{
 	background: url(../images/03-bg.png) no-repeat center bottom;
 }
+#container > #fullpage > .screen03 > .content > .sofa{
+	position: absolute;
+	top: 191px;
+	left: 211px;
+	opacity: 0;
+	z-index: 1001;
+}
 #container > #fullpage > .screen03 > .content > .choices{
 	position: absolute;
 	left: 489px;
@@ -161,9 +170,11 @@
  	display: inline-block;
 }
 /*----------------------------显示隐藏------------------------------*/
-#container > #fullpage > .screen03 > .content > .goods > .sofa.leaving03{
-
+#container > #fullpage > .screen03 > .content > .sofa.leaving03{
+	transform: translate(160px,722px) rotate(16deg);
+	transition: transform 1s;
 }
+
 /*------------------------------------------------screen04---------------------------------------------------------------*/
 #container > #fullpage > .screen04{
 	background: url(../images/04-bg.png) no-repeat center bottom;
@@ -185,7 +196,6 @@
 #container > #fullpage > .screen04 > .content > .text{
 	text-align: center;
 	margin-top: 100px;
-	opacity: 0;
 }
 #container > #fullpage > .screen04 > .content > .text > img:first-child{
  	position: absolute;
@@ -194,8 +204,15 @@
 #container > #fullpage > .screen04 > .content > .realcart{
 	position: absolute;
 	left: 50%;
+	margin-left: -204px;
 	margin-top: 68px;
-	transform: translateX(-50%);
+	z-index: 1002;
+}
+#container > #fullpage > .screen04 > .content > .sofa{
+	position: absolute;
+	left: 370px;
+	top: 170px;
+	opacity: 0;
 }
 #container > #fullpage > .screen04 > .content > .address{
 	position: relative;
@@ -205,4 +222,126 @@
 }
 #container > #fullpage > .screen04 > .content > .address > img:first-child{
  	position: absolute;
+ 	left: 370px;
+ 	top: 60px;
+ 	opacity: 0;
+}
+#container > #fullpage > .screen04.now > .content > .realcart{
+	transform: translateX(1000px);
+	transition: transform 2s linear;
+}
+#container > #fullpage > .screen04.now > .content > .sofa{
+	opacity: 1;
+	transform: translateX(1000px);
+	transition: transform 2s linear;
+}
+#container > #fullpage > .screen04.now > .content.show > .text > img:first-child{
+	opacity: 0;
+	transition: 1s;
+}
+#container > #fullpage > .screen04.now > .content.show > .address{
+	opacity: 1;
+	transition: 1s;
+}
+#container > #fullpage > .screen04.now > .content.show > .address > img:first-child{
+	opacity: 1;
+	transition: 1s;
+}
+/*--------------------------------------screen05-----------------------------------------------------------------------*/
+#container > #fullpage > .screen05{
+	background: url(../images/05-bg.png) no-repeat center bottom;
+}
+#container > #fullpage > .screen05 > .content > .sofa{
+	position: absolute;
+	left: 95px;
+	top: 180px;
+	opacity: 0;
+	transform: translateY(-600px);
+}
+#container > #fullpage > .screen05 > .content > .card{
+	position: absolute;
+	width: 358px;
+	height: 221px;
+	bottom: 200px;
+}
+#container > #fullpage > .screen05 > .content > .card > img:first-child{
+	position: absolute;
+	z-index: 1;
+}
+#container > #fullpage > .screen05 > .content > .card > img:nth-child(2){
+	position: absolute;
+	left: 130px;
+	top: 0;
+}
+#container > #fullpage > .screen05 > .content > .card > img:last-child{
+	position: absolute;
+	left: 95px;
+	bottom: 0;
+	opacity: 0;
+}
+#container > #fullpage > .screen05 > .content > .mouse{
+	position: absolute;
+	right: 0;
+	bottom: 225px;
+	/*height: */
+}
+#container > #fullpage > .screen05 > .content > .mouse > img:first-child{
+	position: absolute;
+}
+#container > #fullpage > .screen05 > .content > .hand{
+	position: absolute;
+	right: 55px;
+	bottom: -5px;
+	transform: translateY(500px);
+}
+#container > #fullpage > .screen05.now > .content > .hand{
+	transform: none;
+	transition: transform 1s linear;
+}
+#container > #fullpage > .screen05.now > .content > .mouse.show > img:first-child{
+	opacity: 0;
+}
+#container > #fullpage > .screen05.now > .content > .sofa{
+	animation: ani_sofa05 2s linear 1s forwards;
+}
+@keyframes ani_sofa05{
+	from{
+		opacity: 1;
+	}
+	50%{
+		opacity: 1;
+		transform: none;
+	}
+	to{
+		opacity: 1;
+		transform: translateY(165px);
+	}
+}
+#container > #fullpage > .screen05.now > .content > .card > img:nth-child(2){
+	transform: translateY(-62%);
+	transition: transform 1s linear 2s;
+}
+#container > #fullpage > .screen05.now > .content > .card > img:last-child{
+	transform: translateY(65%);
+	transition: transform 1s linear 2s;
+}
+/*----------------------------------------screen06---------------------------------------------------------------------*/
+#container > #fullpage > .screen06{
+	background: url(../images/06-bg.png) no-repeat 25% bottom;
+}
+/*#container > #fullpage > .screen06.now{
+	background: url(../images/06-bg.png) no-repeat 100% bottom;
+	transition: background 1s linear 1s;
+}*/
+#container > #fullpage > .screen06 > .content > .clouds01,
+#container > #fullpage > .screen06 > .content > .clouds02{
+	position: absolute;
+	left: 0;
+	top: -50;
+}
+#container > #fullpage > .screen06 > .content > .clouds01{
+	animation: ani_clouds 45s linear infinite alternate;
+}
+#container > #fullpage > .screen06 > .content > .clouds02{
+	animation: ani_clouds 35s linear infinite alternate;
 }
