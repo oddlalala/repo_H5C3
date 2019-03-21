@@ -69,7 +69,7 @@
 					<div class="card">
 						<img src="images/05-card.png" alt="">
 						<img src="images/05-order.png" alt="">
-						<img src="images/04-sofa.png" alt="">
+						<!-- <img src="images/04-sofa.png" alt=""> -->
 					</div>
 					<div class="mouse">
 						<img src="images/05-mouse01.png" alt="">
@@ -78,13 +78,25 @@
 					<div class="hand"><img src="images/05-hand.png" alt=""></div>
 				</div>
 	        </div>
-	        <div class="section screen06 active">第陆屏
+	        <div class="section screen06">第陆屏
 				<div class="content">
 					<div class="clouds01"><img src="images/06-cloud01.png" alt=""></div>
 					<div class="clouds02"><img src="images/06-cloud02.png" alt=""></div>
 					<div class="text">
 						<img src="images/06-text01.png" alt="">
 						<img src="images/06-text02.png" alt="">
+					</div>
+					<div class="box"><img src="images/06-box.png" alt=""></div>
+					<div class="car">
+						<img class="carImg" src="images/06-car.png" alt="">
+						<img class="buyer" src="images/06-buyer.png" alt="">
+						<img class="address" src="images/06-address.png" alt="">
+						<img class="worker" src="images/06-worker.png" alt="">
+					</div>
+					<div class="say"><img src="images/06-say.png" alt=""></div>
+					<div class="destination">
+						<img src="images/06-door.png" alt="">
+						<img src="images/06-person.png" alt="">
 					</div>
 				</div>
 	        </div>
@@ -117,6 +129,9 @@
 					$(".screen05 .hand").on("transitionend",function(){
 						$(".screen05  .mouse").addClass("show");
 					});
+					$(".screen06 .box").on("animationend",function(){
+						$(".screen06").addClass("start");
+					});
 				},
 				onLeave: function(index,nextIndex,direction){
 					// $("#container > #fullpage > .section").eq(index-1).removeClass("now");
@@ -127,7 +142,9 @@
 						});
 					}else if (index == 3 && nextIndex == 4) {
 						$("#container > #fullpage > .screen03 > .content > .sofa").addClass("leaving03");
-
+					}else if (index == 5 && nextIndex == 6) {
+						$("#container > #fullpage > .screen05 > .content > .sofa").addClass("leaving05");
+						$("#container > #fullpage > .screen06 > .content > .box").addClass("leaving05");
 					}
 				}
 				

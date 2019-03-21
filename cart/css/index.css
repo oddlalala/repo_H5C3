@@ -257,6 +257,7 @@
 	top: 180px;
 	opacity: 0;
 	transform: translateY(-600px);
+	z-index: 1001;
 }
 #container > #fullpage > .screen05 > .content > .card{
 	position: absolute;
@@ -266,18 +267,12 @@
 }
 #container > #fullpage > .screen05 > .content > .card > img:first-child{
 	position: absolute;
-	z-index: 1;
+	z-index: 1002;
 }
 #container > #fullpage > .screen05 > .content > .card > img:nth-child(2){
 	position: absolute;
 	left: 130px;
 	top: 0;
-}
-#container > #fullpage > .screen05 > .content > .card > img:last-child{
-	position: absolute;
-	left: 95px;
-	bottom: 0;
-	opacity: 0;
 }
 #container > #fullpage > .screen05 > .content > .mouse{
 	position: absolute;
@@ -321,18 +316,16 @@
 	transform: translateY(-62%);
 	transition: transform 1s linear 2s;
 }
-#container > #fullpage > .screen05.now > .content > .card > img:last-child{
-	transform: translateY(65%);
-	transition: transform 1s linear 2s;
-}
-/*----------------------------------------screen06---------------------------------------------------------------------*/
+/*----------------------------------------screen06---完美------------------------------------------------------------------*/
+/*占位用relative或margin，不占位用absolute定位*/
+/*包裹容器会因内部子元素有换行而产生误差*/
 #container > #fullpage > .screen06{
 	background: url(../images/06-bg.png) no-repeat 25% bottom;
 }
-/*#container > #fullpage > .screen06.now{
+#container > #fullpage > .screen06.start{
 	background: url(../images/06-bg.png) no-repeat 100% bottom;
-	transition: background 1s linear 1s;
-}*/
+	transition: background 1s linear;
+}
 #container > #fullpage > .screen06 > .content > .clouds01,
 #container > #fullpage > .screen06 > .content > .clouds02{
 	position: absolute;
@@ -344,4 +337,154 @@
 }
 #container > #fullpage > .screen06 > .content > .clouds02{
 	animation: ani_clouds 35s linear infinite alternate;
+}
+#container > #fullpage > .screen06 > .content > .text{
+	margin-top: 80px;
+	margin-left: 140px;
+}
+#container > #fullpage > .screen06 > .content > .text > img:first-child{
+	position: absolute;
+}
+#container > #fullpage > .screen06 > .content > .box{
+	position: absolute;
+	left: 140px;
+	top: 180px;
+	opacity: 0;
+	z-index: 1002;
+}
+/*#container > #fullpage > .screen05 > .content > .card.show.leaving05 > img:last-child{
+	transform: translateY(530px) scale(.2);
+	transition: transform 1s linear;
+}*/
+#container > #fullpage > .screen05 > .content > .sofa.leaving05{
+	animation: ani_sofa06 1s linear;
+}
+@keyframes ani_sofa06{
+	from{
+		opacity: 1;
+		transform: translateY(165px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(700px) scale(.2);
+	}
+}
+#container > #fullpage > .screen06 > .content > .box.leaving05{
+	animation: ani_box 2s linear;
+}
+@keyframes ani_box{
+	from{
+		opacity: 1;
+		transform: translateX(-500px);
+	}
+	50%{
+		transform: translateX(0);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(270px) scale(.2);
+	}
+}
+#container > #fullpage > .screen06 > .content > .car{
+	position: absolute;
+	left: 100px;
+	bottom: 0;
+	width: 221px;
+	height: 122px;
+	z-index: 1003;
+}
+#container > #fullpage > .screen06 > .content > .car > img{
+	position: absolute;
+}
+#container > #fullpage > .screen06 > .content > .car > .carImg{
+	position: relative;
+}
+#container > #fullpage > .screen06 > .content > .car > .buyer,
+#container > #fullpage > .screen06 > .content > .car > .address{
+	left: 168px;
+	top: -45px;
+	opacity: 0;
+}
+#container > #fullpage > .screen06 > .content > .car > .worker{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transform: scale(0);
+	transform-origin: left bottom;
+}
+#container > #fullpage > .screen06 > .content > .say{
+	position: absolute;
+	left: 500px;
+	top: 30px;
+	opacity: 0;
+}
+#container > #fullpage > .screen06.start > .content > .car > .buyer{
+	opacity: 1;
+	transition: opacity .2s .2s;
+}
+#container > #fullpage > .screen06.start > .content > .car > .address{
+	opacity: 1;
+	transition: opacity .2s .7s;
+}
+#container > #fullpage > .screen06.start > .content > .car > .worker{
+	animation: ani_worker 1s 1s forwards;
+}
+@keyframes ani_worker{
+	from{
+		
+	}
+	33.3%{
+		transform: scale(1);
+	}
+	66.7%{
+		transform: translateY(-118px);
+	}
+	to{
+		transform: translate(260px,-110px) scale(1);
+	}
+}
+#container > #fullpage > .screen06.start > .content > .say{
+	opacity: 1;
+	transition: opacity .2s 2s;
+}
+#container > #fullpage > .screen06.start > .content > .text > img:first-child{
+	opacity: 0;
+	transition: opacity .3s 2s;
+}
+#container > #fullpage > .screen06 > .content > .destination{
+	position: relative;
+	left: 840px;
+	top: 191px;
+	width: 106px;
+	height: 150px;
+}
+#container > #fullpage > .screen06 > .content > .destination > img:first-child{
+	opacity: 0;
+}
+#container > #fullpage > .screen06 > .content > .destination > img:last-child{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	transform-origin: right bottom;
+}
+#container > #fullpage > .screen06.start > .content > .destination > img:first-child{
+	opacity: 1;
+	transition: opacity .2s 2.5s;
+}
+#container > #fullpage > .screen06.start > .content > .destination > img:last-child{
+	animation: ani_woman 1.5s linear 2.7s forwards;
+}
+@keyframes ani_woman{
+	from{
+		opacity: 1;
+		transform: scale(.5);
+	}
+	33.3%{
+		transform: translateX(-50px) scale(1);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(-200px) scale(1)
+	}
 }
