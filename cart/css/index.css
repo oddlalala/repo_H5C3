@@ -488,3 +488,54 @@
 		transform: translateX(-200px) scale(1)
 	}
 }
+/*-------------------------------------------------screen07-------------------------------------------------------------------------------*/
+#container > #fullpage > .screen07{
+	background: url(../images/07-bg.png) no-repeat center bottom;
+}
+#container > #fullpage > .screen07 > .content > .stars{
+	position: absolute;
+	left: 157px;
+	top: 142px;
+	font-size: 0;
+}
+#container > #fullpage > .screen07 > .content > .stars > img{
+	margin-right: 6px;
+	opacity: 0;
+}
+#container > #fullpage > .screen07 > .content > .rate{
+	/*position: absolute;
+	left: 157px;
+	top: 142px;*/
+	margin-left: 155px;
+	margin-top: 180px;
+	transform-origin: left bottom;
+	transform: scale(0);
+}
+#container > #fullpage > .screen07.now > .content > .stars > img:first-child{
+	opacity: 1;
+	transition: opacity .3s;
+}
+#container > #fullpage > .screen07.now > .content > .stars > img:nth-child(2){
+	opacity: 1;
+	transition: opacity .3s .3s;
+}
+#container > #fullpage > .screen07.now > .content > .stars > img:nth-child(3){
+	opacity: 1;
+	transition: opacity .3s .6s;
+}
+#container > #fullpage > .screen07.now > .content > .stars > img:nth-child(4){
+	opacity: 1;
+	transition: opacity .3s .9s;
+}
+#container > #fullpage > .screen07.now > .content > .stars > img:last-child{
+	opacity: 1;
+	transition: opacity .3s 1.2s;
+}
+#container > #fullpage > .screen07.now > .content > .rate{
+	transform: none;
+	transition: transform .5s 1.5s;
+}
+/*-------------------------------------------------screen07-----------------------------------------------------------------------------------------*/
+#container > #fullpage > .screen08{
+	background: url(../images/08-bg.png);
+}
