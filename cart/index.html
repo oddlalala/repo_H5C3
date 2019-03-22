@@ -113,9 +113,12 @@
 				</div>
 	        </div>
 	        <div class="section screen08 active">第捌屏
-				<div class="content">
-					
+				<div class="shopping">
+					<img src="images/08-btn01.png" alt="">
+					<img src="images/08-btn02.gif" alt="">
 				</div>
+				<div class="again"><img src="images/08-again.png" alt=""></div>
+				<div class="hand"><img src="images/08-hand.png" alt=""></div>
 	        </div>
 	    </div>
 	</div>
@@ -146,6 +149,12 @@
 					});
 					$(".screen06 .box").on("animationend",function(){
 						$(".screen06").addClass("start");
+					});
+					$(".screen08").on("mousemove",function(ev){
+						$(".screen08 .hand").css({left: ev.clientX,top: ev.clientY + 20}); /*防止鼠标hover在.hand上而不是.shopping上*/
+					});
+					$(".screen08 .again").on("click",function(){
+						
 					});
 				},
 				onLeave: function(index,nextIndex,direction){

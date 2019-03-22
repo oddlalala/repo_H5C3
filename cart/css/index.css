@@ -532,10 +532,40 @@
 	transition: opacity .3s 1.2s;
 }
 #container > #fullpage > .screen07.now > .content > .rate{
-	transform: none;
-	transition: transform .5s 1.5s;
+	animation: ani_rate .6s 1.5s forwards;
+}
+@keyframes ani_rate{
+	from{
+		
+	}
+	90%{
+		transform: scale(1.1);
+	}
+	to{
+		transform: none;
+	}
 }
 /*-------------------------------------------------screen07-----------------------------------------------------------------------------------------*/
 #container > #fullpage > .screen08{
 	background: url(../images/08-bg.png);
+}
+#container > #fullpage > .screen08 > .shopping{
+	margin-top: 100px;
+	text-align: center;
+}
+#container > #fullpage > .screen08 > .shopping > img:first-child{
+	position: absolute;
+}
+#container > #fullpage > .screen08 > .shopping:hover > img:first-child{
+	display: none;
+}
+#container > #fullpage > .screen08 > .again{
+	position: absolute;
+	right: 330px;
+	bottom: 488px;
+}
+#container > #fullpage > .screen08 > .hand{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
