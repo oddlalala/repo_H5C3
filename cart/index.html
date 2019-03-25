@@ -154,7 +154,9 @@
 						$(".screen08 .hand").css({left: ev.clientX,top: ev.clientY + 20}); /*防止鼠标hover在.hand上而不是.shopping上*/
 					});
 					$(".screen08 .again").on("click",function(){
-						
+						$(".content [style]").removeAttr("style");
+						$(".now,.show,.start,.leaving02,.leaving03,.leaving05").removeClass("now").removeClass("show").removeClass("start").removeClass("leaving02").removeClass("leaving03").removeClass("leaving05");
+						$.fn.fullpage.moveTo(1);
 					});
 				},
 				onLeave: function(index,nextIndex,direction){
