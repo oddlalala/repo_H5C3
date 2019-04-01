@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		header{
+			background: url(images/nav_bg.png) repeat-x;
+		}
+		header > .wrap{
+			width: 1080px;
+			height: 150px;
+			margin: 0 auto;
+		}
+		header > .wrap > .leftHeader{
+			float: left;
+		}
+		header > .wrap > .leftHeader > .logo{
+			float: left;
+			width: 93px;
+			height: 44px;
+			margin-top: 17px;
+		}
+		header > .wrap > .leftHeader > .nav{
+			float: left;
+		}
+		header > .wrap > .leftHeader > .nav > li{
+			float: left;
+			width: 77px;
+			height: 77px;
+			margin-left: 20px;
+		}
+		header > .wrap > .leftHeader > .nav > li > a{
+			display: block;
+			line-height: 77px;
+			text-align: center;
+			font-size: 18px;
+			color: #333;
+		}
+		header > .wrap > .leftHeader > .nav > li > a.active{
+			background: #12b7f5;
+		}
+		header > .wrap > .leftHeader > .nav > li > a:hover{
+			background: #12b7f5;
+		}
+		header > .wrap > .rightHeader{
+			float: right;
+			position: relative;
+		}
+		header > .wrap > .rightHeader > .register{
+			position: absolute;
+			top: 20px;
+			right: 250px;
+			width: 100px;
+			height: 38px;
+			line-height: 38px;
+			text-align: center;
+			color: #fff;
+			background: #12b7f5;
+		}
+		header > .wrap > .rightHeader > .log{
+			
+		}
+		header > .wrap > .rightHeader > .log > li{
+			
+		}
+		header > .wrap > .rightHeader > .statistics{
+			
+		}
+		section{
+			background: green;
+		}
+		footer{
+			background: grey;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="wrap">
+			<div class="leftHeader">
+				<div class="logo"><img src="images/nav_brand.png" alt=""></div>
+				<ul class="nav">
+					<li><a href="" class="active">首页</a></li>
+					<li><a href="">下载</a></li>
+					<li><a href="">动态</a></li>
+				</ul>
+			</div>
+			<div class="rightHeader">
+				<a class="register">注册</a>
+				<ul class="log">
+					<li><a href="">登录</a></li>
+					<li><a href="">qq会员</a></li>
+					<li><a href="">qq安全</a></li>
+				</ul>
+				<div class="statistics">当前在线人数：<span>227,763,015</span></div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="banner"></div>
+		<div class="sound"></div>
+		<div class="file"></div>
+		<div class="interest"></div>
+	</section>
+	<footer>
+		
+	</footer>
+</body>
+</html>
