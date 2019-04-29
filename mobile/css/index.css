@@ -1,0 +1,102 @@
+.jd_container{
+	min-width: 320px;
+	max-width: 640px;
+	width: 100%;
+	height: 1000px;
+	margin: 0 auto;
+	background: rgba(200,200,200,.3);
+}
+/*--------------------------------header---------------------------------------*/
+.jd_container > header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 40px;
+}
+.jd_container > header > .header_container{
+	position: relative;
+	min-width: 320px;
+	max-width: 640px;
+	width: 100%;
+	height: 40px;
+	margin: 0 auto;
+	background: rgba(201,21,35,.85);
+}
+.jd_container > header > .header_container >.icon_logo{
+	position: absolute;
+	left: 5px;
+	top: 7px;
+	width: 60px;
+	height: 25px;
+	/*background: url(../images/sprites.png) 1px -108px no-repeat / 200px 200px;*/
+	background-position: 1px -108px;
+}
+.jd_container > header > .header_container > .search{
+	width: 100%;
+	height: 40px;
+	padding: 0 55px 0 70px;
+}
+.jd_container > header > .header_container > .search > .icon_search{
+	position: absolute;
+	left: 75px;
+	top: 10px;
+	width: 20px;
+	height: 20px;
+	background-position: -60px -110px;
+}
+.jd_container > header > .header_container > .search > input{
+	width: 100%;
+	height: 30px;
+	margin-top: 5px;
+	border-radius: 15px;
+	text-indent: 35px;
+}
+.jd_container > header > .header_container > .login{
+	position: absolute;
+	right: 5px;
+	top: 0;
+	width: 50px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+}
+/*-------------------------------------banner----------------------------------*/
+.jd_container > .banner{
+	margin-top: 40px;
+	position: relative;
+
+}
+.jd_container > .banner > .pictures{
+	position: relative;
+	left: -100%;
+	top: 0;
+	width: 1000%;
+
+}
+.jd_container > .banner > .pictures > li{
+	float: left;
+	width: 10%;
+}
+.jd_container > .banner > .pictures > li img{
+	display: block;
+	width: 100%;
+}
+.jd_container > .banner > .points{
+	position: absolute;
+	left: 50%;
+	bottom: 5px;
+	margin-left: -63px;
+}
+.jd_container > .banner > .points > li{
+	float: left;
+	width: 7px;
+	height: 7px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+.jd_container > .banner > .points > li:last-child{
+	margin-right: 0;
+}
