@@ -2,7 +2,6 @@
 	min-width: 320px;
 	max-width: 640px;
 	width: 100%;
-	height: 1000px;
 	margin: 0 auto;
 	background: #f5f5f5;
 }
@@ -126,120 +125,112 @@
 	width: 40px;
 	height: 40px;
 }
-/*-------------------------------------products------------------------------------*/
+/*-------------------------------------section01------------------------------------*/
 .jd_container > .products{
-	width: 100%;
 	padding: 0 5px;
 }
-.jd_container > .products > .panicBuying{
-	/*background: lightblue;*/
-	margin-top: 10px;
-	box-shadow: 0 0 2px #ccc;
-	background: #fff;
-	padding-bottom: 10px;
-}
-.jd_container > .products > .panicBuying > .deadline{
+.jd_container > .products > section{
 	width: 100%;
-	height: 34px;
-	line-height: 34px;
-}
-.jd_container > .products > .panicBuying > .deadline > .icon_deadline{
-	display: block;
-	float: left;
-	width: 20px;
-	height: 25px;
-	background: url(../images/seckill-icon.png) no-repeat center / 20px 25px;
-	margin: 4px 10px;
-}
-.jd_container > .products > .panicBuying > .deadline > .text{
-	display: block;
-	float: left;
-	font-size: 16px;
-	color: #d8505c;
-	margin-right: 10px;
-}
-.jd_container > .products > .panicBuying > .deadline > .time{
-	float: left;
-}
-.jd_container > .products > .panicBuying > .deadline > .time > span{
-	display: inline-block;
-	width: 17px;
-	height: 18px;
-	line-height: 18px;
-	text-align: center;
-	color: #fff;
-	background: #333;
-	margin-left: 3px;
-}
-.jd_container > .products > .panicBuying > .deadline > a{
-	float: right;
-}
-.jd_container > .products > .panicBuying > .items{
-	margin-top: 10px;
-}
-.jd_container > .products > .panicBuying > .items > li{
-	float: left;
-	width: 33.3%;
-}
-.jd_container > .products > .panicBuying > .items > li > div{
-	border-right: 1px solid #ddd;
-}
-.jd_container > .products > .panicBuying > .items > .item_3 > div{
-	border-right: none;
-}
-.jd_container > .products > .panicBuying > .items img{
-	width: 66.6%;
-	display: block;
-	margin: 0 auto;
-}
-.jd_container > .products > .panicBuying > .items p{
-	height: 26px;
-	line-height: 26px;
-	font-size: 12px;
-	text-align: center;
-	padding: 5px 0;
-}
-.jd_container > .products > .panicBuying > .items .valid{
-	color: #d8505c;
-}
-.jd_container > .products > .panicBuying > .items .invalid{
-	text-decoration: line-through;
-}
-/*------------------------------------section_2----------------------------------*/
-.jd_container > .products > .section_2{
 	margin-top: 10px;
 	box-shadow: 0 0 2px #ccc;
 	background: #fff;
 }
-.jd_container > .products > .section_2 > .sectionHeader{
-	height: 35px;
-	border-bottom: 1px solid #ddd;
-}
-.jd_container > .products > .section_2 > .sectionHeader > span{
-	display: block;
-	float: left;
-	height: 13px;
-	border-right: 3px solid;
-	margin: 11px 8px;
-}
-.jd_container > .products > .section_2 > .sectionHeader > h3{
+.section_header{
+	width: 100%;
 	height: 35px;
 	line-height: 35px;
 }
-
-.jd_container > .products > .section_2 > .items > div{
+.bd_bottom{
+	border-bottom: 1px solid #ccc;
+}
+.bd_right{
+	border-right: 1px solid #ccc;
+}
+.jd_container > .products > .section01 > .section_header > .icon_clock{
 	float: left;
+	width: 16px;
+	height: 20px;
+	background: url(../images/seckill-icon.png) no-repeat center / 16px 20px;
+	margin: 7px 10px;
+}
+.jd_container > .products > .section01 > .section_header > .text{
+	float: left;
+	font-size: 16px;
+	color: #d8505c;
+}
+.jd_container > .products > .section01 > .section_header > .time{
+	float: left;
+	margin-left: 10px;
+}
+.jd_container > .products > .section01 > .section_header > .time > span{
+	float: left;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	background: #333;
+	color: #fff;
+	margin-top: 9px;
+	margin-left: 3px;
+}
+.jd_container > .products > .section01 > .section_header > .time > span:nth-child(3),
+.jd_container > .products > .section01 > .section_header > .time > span:nth-child(6){
+	width: auto;
+	background: #fff;
+	color: #333;
+}
+.jd_container > .products > .section01 > .section_header > .more{
+	float: right;
+	margin-right: 10px;
+}
+.item{
+	float: left;
+	width: 33.33%;
+}
+.item > a{
+	display: block;
+	width: 100%;
+}
+.item > a > img{
+	display: block;
+	width: 66.66%;
+	margin: 0 auto;
+}
+.item > p{
+	text-align: center;
+	font-size: 12px;
+	padding: 5px 0;
+}
+p.valid{
+	color: #d8505c;
+}
+p.invalid{
+	color: #666;
+    text-decoration: line-through;
+}
+.pd_bottom{
+	padding-bottom: 10px;
+}
+/*--------------------------------------section02-04----------------------------------------------*/
+.h3_style{
+	font-weight: normal;
+}
+.h3_style::before{
+	content: "";
+	float: left;
+	width: 3px;
+	height: 12px;
+	background: #d8505c;
+	margin: 11px;
+}
+.half{
 	width: 50%;
 }
-.jd_container > .products > .section_2 > .items > .left{
-	border-right: 1px solid #ddd;
-}
-.jd_container > .products > .section_2 > .items > .left img{
+.half > img{
 	display: block;
 	width: 100%;
 }
-.jd_container > .products > .section_2 > .items > .right img{
-	display: block;
-	width: 100%;
-	/*height: 50%;*/
+.bd_left{
+	border-left: 1px solid #ccc;
 }
+
