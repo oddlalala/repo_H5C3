@@ -12,6 +12,7 @@
 	top: 0;
 	width: 100%;
 	height: 40px;
+	z-index: 1;
 }
 .jd_container > header > .header_container{
 	position: relative;
@@ -20,7 +21,7 @@
 	width: 100%;
 	height: 40px;
 	margin: 0 auto;
-	background: rgba(201,21,35,.85);
+	background: rgba(201,21,35,0);
 }
 .jd_container > header > .header_container >.icon_logo{
 	position: absolute;
@@ -63,7 +64,7 @@
 }
 /*-------------------------------------banner----------------------------------*/
 .jd_container > .banner{
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 	position: relative;
 
 }
