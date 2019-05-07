@@ -22,64 +22,83 @@ window.onload = function(){
 		var pointLi = banner.querySelectorAll(".points > li");
 		var eachLength = banner.offsetWidth;
 		var index = 1;
+		var moveLength = 0;
 		function addTranslateX(l){
 			ulPictures.style.transform = "translateX(" + l + "px)";
 			ulPictures.style.webkitTransform = "translateX(" + l + "px)";
 		}
 		function addTransition(){
-			ulPictures.style.transition = "transform 1s";
-			ulPictures.style.webkitTransition = "transform 1s";
+			ulPictures.style.transition = "transform .5s";
+			ulPictures.style.webkitTransition = "transform .5s";
 		}
 		function removeTransition(){
 			ulPictures.style.transition = "none";
 			ulPictures.style.webkitTransition = "none";
 		}
-		// 自动轮播图且无缝
+		function setPointLi(){
+			banner.querySelector(".points > li.active").classList.remove("active");
+			pointLi[index - 1].classList.add("active");
+		}
+		// 1 自动轮播图且无缝
 		var timer = setInterval(function(){
 			index++;
-			var moveLength = -(index - 1) * eachLength;
+			moveLength = -(index - 1) * eachLength;
 			addTranslateX(moveLength);
 			addTransition();
-			// 点随着图片的轮播改变
 		},2000);
+		// 2 点随着图片的轮播改变
 		ulPictures.addEventListener("transitionend",function(){
 			if (index >= 9 ) {
 				index = 1;
-				addTranslateX(0);
+				moveLength = -(index - 1) * eachLength;   /*index改变，实时改变moveLength的值*/
+				addTranslateX(moveLength);
 				removeTransition();
 			}
 			if (index <= 0) {
 				index = 8;
-				addTranslateX((index - 1) * eachLength);
+				moveLength = -(index - 1) * eachLength;
+				addTranslateX(moveLength);
 				removeTransition();
 			}
-			banner.querySelector(".points > li.active").classList.remove("active");
-			pointLi[index - 1].classList.add("active");
+			setPointLi();
 		});
-		// 滑动效果
+		// 3 滑动效果
 		var startX = 0;
-		var moveX = 0;
 		var distanceX = 0;
 		ulPictures.addEventListener("touchstart",function(e){
 			startX = e.changedTouches[0].clientX;
-			console.log(ulPictures.offsetLeft);
+			clearInterval(timer);
 		});
 		ulPictures.addEventListener("touchmove",function(e){
-			moveX = e.changedTouches[0].clientX;
+			var	moveX = e.changedTouches[0].clientX;
 			distanceX = moveX - startX;
-
-			clearInterval(timer);
-			addTranslateX((index - 1) * eachLength + distanceX);
-			console.log(ulPictures.offsetLeft);
+			addTranslateX(moveLength + distanceX);
+			removeTransition();   /*否则会出现移不动的感觉*/
 		});
 		ulPictures.addEventListener("touchend",function(e){
-			// 滑动结束的时候  如果滑动的距离不超过屏幕的1/3  吸附回去，过渡
-			// 滑动结束的时候  如果滑动的距离超过屏幕的1/3  切换（上一张，下一张）根据滑动的方向，过渡
-			if (distanceX < eachLength / 3) {
-
+			// 4.1 滑动结束的时候  如果滑动的距离不超过屏幕的1/3  吸附回去，过渡
+			// 4.2 滑动结束的时候  如果滑动的距离超过屏幕的1/3  切换（上一张，下一张）根据滑动的方向，过渡
+			if (Math.abs(distanceX) < eachLength / 3) {
+				addTranslateX(moveLength);   /*index没变，moveLength不变*/
+				addTransition();
 			}else {
-				
+				if (distanceX < 0) {
+					index++;
+					moveLength = -(index - 1) * eachLength;
+				}else {
+					index--;
+					moveLength = -(index - 1) * eachLength;
+				}
+				addTranslateX(moveLength);
+				addTransition();
 			}
+			timer = setInterval(function(){
+				index++;
+				moveLength = -(index - 1) * eachLength;
+				addTranslateX(moveLength);
+				addTransition();
+			},2000);
+
 		});
 		
 	}
