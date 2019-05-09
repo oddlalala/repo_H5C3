@@ -1,12 +1,15 @@
 html,body{
 	height: 100%;
 }
+/*--------------------------------------------header--------------------------------------------*/
 .catg_container{
 	width: 100%;
 	height: 100%;
 	background: lightyellow;
 }
 .catg_container > header{
+	float: left;
+	width: 100%;
 	height: 45px;
 	border-bottom: 1px solid #ccc;
 	background: url(../images/header-bg.png) repeat-x 0 0 / 1px 44px;
@@ -41,4 +44,74 @@ a.icon_a_right{
 	border: 1px solid #ddd;
 	border-radius: 4px;
 	padding: 0 10px;
+}
+/*-------------------------------------------------aside-------------------------------------------*/
+.catg_container > .main{
+	width: 100%;
+	height: 100%;
+	padding-top: 45px;
+	font-size: 12px;
+}
+.catg_container > .main > aside{
+	float: left;
+	width: 90px;
+	height: 100%;
+}
+.catg_container > .main > article{
+	/*width: 100%;*/
+	height: 100%;
+	overflow: hidden;
+	padding: 0 10px;
+}
+.catg_container > .main > aside > ul > li{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	line-height: 50px;
+	text-align: center;
+}
+.catg_container > .main > aside > ul > li.active{
+	border-right: none;
+}
+.catg_container > .main > aside > ul > li > a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+/*-------------------------------------------------article-------------------------------------------*/
+.catg_container > .main > article > .banner{
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+}
+.catg_container > .main > article > .banner > img{
+	display: block;
+	width: 100%;
+}
+.catg_container > .main > article > div > h3{
+	/*font-size: 12px;*/
+}
+.catg_container > .main > article > div > ul{
+	width: 100%;
+}
+.catg_container > .main > article > div > ul > li{
+	float: left;
+	width: 33.333%;
+	margin-top: 5px;
+}
+.catg_container > .main > article > div > ul > li > a{
+	display: block;
+	/*width: 100%;*/
+}
+.catg_container > .main > article > div > ul > li > a > img{
+	display: block;
+	width: 62px;
+	height: 62px;
+	margin: 0 auto;
+}
+.catg_container > .main > article > div > ul > li > a > p{
+	text-align: center;
+	margin: 5px 0;
+	/*font-size: 12px;*/
 }
