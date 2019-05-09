@@ -1,0 +1,44 @@
+html,body{
+	height: 100%;
+}
+.catg_container{
+	width: 100%;
+	height: 100%;
+	background: lightyellow;
+}
+.catg_container > header{
+	height: 45px;
+	border-bottom: 1px solid #ccc;
+	background: url(../images/header-bg.png) repeat-x 0 0 / 1px 44px;
+}
+.catg_container > header > a{
+	position: absolute;
+	width: 40px;
+	height: 44px;
+	padding: 11px 10px;
+	/*background-origin: content-box;*/
+	background-clip: content-box;
+}
+a.icon_a_left{
+	left: 0;
+	top: 0;
+	background-position: -12px 12px;
+}
+a.icon_a_right{
+	right: 0;
+	top: 0;
+	background-position: -51px 12px;
+}
+.catg_container > header > form{
+	width: 100%;
+	height: 100%;
+	padding: 0 40px;
+}
+.catg_container > header > form > input{
+	width: 100%;
+	height: 30px;
+	margin-top: 7px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 0 10px;
+}
