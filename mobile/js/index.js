@@ -103,6 +103,22 @@ window.onload = function(){
 		
 	}
 	function countdown(){
-
+		var duration = .2 * 60 * 60;
+		var spansTime = document.querySelectorAll(".jd_container > .products > .section01 > .section_header > .time > span");
+		var timer = setInterval(function(){
+			duration--;
+			var h = Math.floor(duration / 60 / 60);
+			var m = Math.floor(duration / 60 % 60);
+			var s = Math.floor(duration % 60);
+			spansTime[0].innerHTML = Math.floor(h / 10);
+			spansTime[1].innerHTML = Math.floor(h % 10);
+			spansTime[3].innerHTML = Math.floor(m / 10);
+			spansTime[4].innerHTML = Math.floor(m % 10);
+			spansTime[6].innerHTML = Math.floor(s / 10);
+			spansTime[7].innerHTML = Math.floor(s % 10);
+			if (duration <= 0) {
+				clearInterval(timer);
+			}
+		},1000);
 	}
 }
