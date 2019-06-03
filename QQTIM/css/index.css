@@ -1,0 +1,79 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*----------------------------common-------------------------------------*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+/*-----------------------------------------------------------------*/
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+header{
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	background: url(../images/nav_bg.png) repeat-x;
+}
+header > .center{
+	position: relative;
+	width: 1080px;
+	height: 75px;
+	margin: 0 auto;
+	background: rgba(250,200,200,.3);
+}
+header > .center > .left_header > .logo{
+	margin-top: 15px;
+}
+header > .center > .left_header > .logo > img{
+	display: block;
+}
+header > .center > .left_header > .nav > li{
+	width: 77px;
+	height: 75px;
+	line-height: 75px;
+	text-align: center;
+	margin-left: 20px;
+}
+header > .center > .left_header > .nav > li:hover{
+	background: #12b7f5;
+}
+header > .center > .left_header > .nav > li.active{
+	background: #12b7f5;
+}
+header > .center > .right_header{
+	
+}
+header > .center > .right_header > .register{
+	position: absolute;
+	top: 20px;
+	right: 250px;
+	width: 96px;
+	height: 36px;
+	border-radius: 18px;
+	background: #12b7f5;
+	color: #fff;
+	line-height: 36px;
+	text-align: center;
+}
+header > .center > .right_header > .account{
+
+}
+header > .center > .right_header > .account > li{
+	margin-left: 40px;
+}
+header > .center > .right_header > .statistics{
+	
+}
+/*----------------------------------------------------------------------------*/
+section > .banner{
+	height: 1030px;
+	background: url(../images/banner-bg.jpg);
+}
