@@ -72,8 +72,97 @@ header > .center > .right_header > .account > li{
 header > .center > .right_header > .statistics{
 	
 }
-/*----------------------------------------------------------------------------*/
+/*-------------------------------banner---------------------------------------------*/
 section > .banner{
-	height: 1030px;
-	background: url(../images/banner-bg.jpg);
+	height: 880px;
+	padding-top: 150px;
+	background: url(../images/banner-bg.jpg) no-repeat;
+}
+section > .banner img{
+	display: block;
+	margin: 20px auto;
+}
+section > .banner > a{
+	display: block;
+}
+section > .banner > img:last-child{
+	width: 100%;
+}
+/*-------------------------------sound--------------------------------------------*/
+.cont{
+	position: relative;
+	width: 980px;
+	height: 500px;
+	margin: 0 auto;
+}
+[class*="_bg"]{
+	height: 500px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+section > .sound > h1{
+	height: 300px;
+}
+section > .sound > h1 > img{
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+}
+section > .sound > .sound_bg{
+	background-image: url(../images/sound-bg.jpg);
+}
+section > .sound > .sound_content > .hand{
+	position: absolute;
+	left: 0;
+	top: -200px;
+	width: 700px;
+	height: 700px;
+	background: url(../images/sound-phone.png) no-repeat center top/cover;
+}
+/*----------------------*/
+section .words{
+    margin-top: 100px;
+    width: 500px;
+    text-align: right;
+}
+section .words.fl{
+	text-align: left;
+}
+section .words > h2{
+	font-size: 40px;
+}
+section .words > p{
+	margin-top: 50px;
+    font-size: 18px;
+    text-shadow: 0 0 2px #333;
+}
+/*----------------------*/
+section > .file > .file_bg{
+	background-image: url(../images/file-bg.jpg);
+}
+section > .file > .file_content > .mac{
+	position: absolute;
+    right: -60px;
+    top: 100px;
+	width: 600px;
+    height: 340px;
+    background: url(../images/file-mac.png) no-repeat center/cover;
+}
+section > .interest > .interest_bg{
+	background-image: url(../images/interest-bg.jpg);
+}
+section > .interest > .interest_content > .phone{
+	position: absolute;
+    left: 0;
+    top: 0;
+	width: 350px;
+    height: 500px;
+    background: url(../images/interest-phone.png) no-repeat center top/cover;
+}
+/*----------------------------------footer-----------------------------------------------------*/
+footer{
+	height: 300px;
+	background: #2a2a2a;
 }
