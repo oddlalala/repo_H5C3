@@ -1,11 +1,13 @@
+<!-- map：源码和压缩代码的映射关系
+theme：引入则采用扁平化样式 -->
 <!-- h5文档申明 -->
 <!DOCTYPE html>
-<!-- 文档语言申明 -->
+<!-- 文档语言申明 --><!-- 申明的语言如果与本地语言不一致，则浏览器会提示是否翻译 -->
 <html lang="zh-CN">
   <head>
     <!-- 文档编码申明 -->
     <meta charset="utf-8">
-    <!-- 要求当前网页使用浏览器最高版本的内核来渲染 -->
+    <!-- 要求当前网页使用浏览器最高版本的内核来渲染 --><!-- 有可选内核的情况下 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- 视口的设置： -->
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
@@ -16,7 +18,7 @@
 
        <!-- html5shiv和respond分别用来解决IE8版本浏览器 不支持H5标签 和 媒体查询的不兼容问题 -->
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用（异步，底层用到AJAX） -->
     <!--[if lt IE 9]>
       <script src="F:/repo_H5C3/lib/html5shiv-master/dist/html5shiv.min.js"></script>
       <script src="F:/repo_H5C3/lib/Respond-master/dest/respond.min.js"></script>
