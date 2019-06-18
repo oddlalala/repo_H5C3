@@ -179,17 +179,17 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
   color: #ccc;
 }
 /*------------------------------轮播图-----------------------------------------*/
-.wjs_banner .carousel-inner > .item >a:first-child{
+.wjs_banner .carousel-inner > .item > .pc_version{
   display: block;
   height: 400px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.wjs_banner .carousel-inner > .item > a:last-child{
+.wjs_banner .carousel-inner > .item > .m_version{
   display: block;
   width: 100%;
 }
-.wjs_banner .carousel-inner > .item > a:last-child > img{
+.wjs_banner .carousel-inner > .item > .m_version > img{
   width: 100%;
 }

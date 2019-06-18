@@ -64,7 +64,7 @@
             <li><a href="javascript:;">最新动态</a></li>
             <li><a href="javascript:;">微平台</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right hidden-sm">
             <li><a href="javascript:;">个人中心</a></li>
           </ul>
         </div>
@@ -75,14 +75,14 @@
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <!-- <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
           <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li> -->
         </ol>
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-          <div class="item active">
+          <!-- <div class="item active">
             <a href="javascript:;" class="hidden-xs"  style="background-image: url(images/slide_01_2000x410.jpg);"></a>
             <a href="javascript:;" class="hidden-sm hidden-md hidden-lg"><img src="images/slide_01_640x340.jpg"></a>
           </div>
@@ -97,7 +97,7 @@
           <div class="item">
             <a href="javascript:;" class="hidden-xs" style="background-image: url(images/slide_04_2000x410.jpg);"></a>
             <a href="javascript:;" class="hidden-sm hidden-md hidden-lg"><img src="images/slide_04_640x340.jpg"></a>
-          </div>
+          </div> -->
         </div>
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -120,5 +120,23 @@
     <footer class="wjs_partner"></footer>
     <script src="lib/jquery/jquery.js"></script>
     <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/artTemplate/template-native.js"></script>
+    <script id="template_points" type="text/x-art-template">
+      <% for(var i=0;i<url.length;i++){ %>
+        <li data-target="#carousel-example-generic" data-slide-to="<%= i %>"<%= i==0?'class=active':'' %>></li>
+      <% } %>
+    </script>
+    <script id="template_images" type="text/x-art-template">
+      <% for(var i=0;i<url.length;i++){ %>
+        <div class="item<%= i==0?' active':'' %>">
+          <% if(isM){ %>
+            <a class="pc_version" href="javascript:;" style="background-image: url(<%= url[i].pcUrl %>);"></a>
+          <% } else { %>
+            <a class="m_version" href="javascript:;"><img src="<%= url[i].mUrl %>"></a>
+          <% } %>
+        </div>
+      <% } %>
+    </script>
+    <script src="js/index.js"></script>
   </body>
 </html>
