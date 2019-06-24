@@ -33,6 +33,12 @@ a,a:hover{
 .wjs_icon_dollar:before{
   content: "\e903";
 }
+.wjs_icon_clock:before{
+  content: "\e906";
+}
+.wjs_icon_camera:before{
+  content: "\e905";
+}
 /*-----------------------------顶部---------------------------------*/
 .wjs_topBar{
 	border-bottom: 1px solid #ccc;
@@ -219,3 +225,32 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
 .wjs_info .media .media-left{
   font-size: 28px;
 }
+/*---------------------------------预约模块--------------------------------------*/
+.wjs_book{
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc;
+}
+.wjs_book > .container{
+  width: 900px;
+}
+@media (max-width: 992px){
+  .wjs_book > .container{
+    width: 750px;
+  }
+}
+@media (max-width: 768px){
+  .wjs_book > .container{
+    width: 100%;
+  }
+}
+.wjs_book > .container > div .wjs_icon{
+  font-size: 20px;
+}
+.wjs_book > .container > .pull-left > a{
+  color: #e92322;
+  border-bottom: 1px dashed #e92322;
+}
+.wjs_book > .container > .pull-right > a:hover{
+  color: #e92322;
+}
+/*--------------------------------wjs_product-----------------------------------*/
