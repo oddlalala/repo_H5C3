@@ -254,3 +254,37 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
   color: #e92322;
 }
 /*--------------------------------wjs_product-----------------------------------*/
+.wjs_product{
+  height: 500px;
+  padding: 20px 0;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+}
+.wjs_product .nav-tabs {
+  border-bottom: 1px solid #ddd;
+}
+.wjs_product .nav-tabs > li {
+  float: left;
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+.wjs_product .nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: none;
+  border-radius: 4px 4px 0 0;
+}
+.wjs_product .nav-tabs > li > a:hover {
+  border-color: none;
+  background: #f5f5f5;
+}
+.wjs_product .nav-tabs > li.active > a,
+.wjs_product .nav-tabs > li.active > a:hover,
+.wjs_product .nav-tabs > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background-color: #f5f5f5;
+  border: none;
+  border-bottom-color: transparent;
+  border-bottom: 3px solid #e92322;
+}
