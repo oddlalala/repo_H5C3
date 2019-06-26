@@ -44,4 +44,13 @@ $(function(){
 		length = 0;
 		isMove = false;
 	});
+
+	var $tabs = $('.wjs_product .nav-tabs > li');
+	var nav_length = 0;
+	for (var i = 0; i < $tabs.length; i++) {
+		nav_length += $(this).outerWidth(true);
+		// console.log($(this)[0]);
+	}
+	$('.wjs_product .nav-tabs').width(nav_length);
+	console.log(this);
 })

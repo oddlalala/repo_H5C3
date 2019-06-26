@@ -261,6 +261,7 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
   border-bottom: 1px solid #ccc;
 }
 .wjs_product .nav-tabs {
+	width: 800px;
   border-bottom: 1px solid #ddd;
 }
 .wjs_product .nav-tabs > li {
@@ -287,4 +288,8 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
   border: none;
   border-bottom-color: transparent;
   border-bottom: 3px solid #e92322;
+}
+.wjs_product > .container > .nav_wrap{
+	width: 100%;
+	overflow: hidden;
 }
