@@ -1,3 +1,4 @@
+/*a的子元素继承“color:#333;”*/
 body{
 	font-size: 14px;
 	font-family: "Microsoft Yahei",sans-serif;
@@ -39,6 +40,9 @@ a,a:hover{
 .wjs_icon_camera:before{
   content: "\e905";
 }
+/*.wjs_icon_tiyan:before{
+  content: "\e915"
+}*/
 /*-----------------------------顶部---------------------------------*/
 .wjs_topBar{
 	border-bottom: 1px solid #ccc;
@@ -292,4 +296,87 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
 .wjs_product > .container > .nav_wrap{
 	width: 100%;
 	overflow: hidden;
+}
+/*------------------------------------------*/
+.wjs_product .tab-content > #product01 > .container > div{
+  height: 150px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 30px;
+}
+.wjs_product .tab-content > #product01 > .container > div > a{
+  display: block;
+  height: 100%;
+  box-shadow: 3px 3px 5px #d8d8d8;   /*阴影默认四周都有5px，“3px 3px”代表向右偏移3px，向下偏移3px，这样四周阴影分别为2px 8px 8px 2px*/
+  color: #666;   /*券字体颜色继承*/
+}
+.wjs_product .tab-content > #product01 > .container > div > a.active{
+  position: relative;
+  background: #e92322;
+  color: #fff;
+}
+.wjs_product .tab-content > #product01 > .container > div > a.active::before{
+  position: absolute;
+  left: 0;
+  top: -7px;
+  content: "\e915";
+  font-family: "wjs";
+  font-size: 33px;
+}
+.wjs_product .ticket_right{
+  float: right;
+  width: 80px;
+  height: 100%;
+  border-left: 1px dashed #ccc;
+  text-align: center;
+}
+.wjs_product a.active > .ticket_right{
+  position: relative;
+  border-left-color: #fff; 
+}
+.wjs_product .ticket_right > p:first-of-type{
+  margin: 25px 0 10px;
+  color: #e92322;
+}
+.wjs_product a.active .ticket_right > p:first-of-type{
+  color: #fff;
+}
+.wjs_product .ticket_right > p:first-of-type > span{
+  font-size: 48px;
+  font-weight: bold;
+}
+.wjs_product .ticket_right > p:first-of-type > sub{
+  bottom: 0;
+}
+.wjs_product .ticket_right > p:last-of-type{
+  /*p元素默认margin-bottom: 10px;*/
+}
+.wjs_product .ticket_right::before,.wjs_product .ticket_right::after{
+  content: "";
+  position: absolute;
+  left: -6px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+.wjs_product .ticket_right::before{
+  top: -6px;
+  box-shadow: 0 -1px 1px #d8d8d8 inset;
+}
+.wjs_product .ticket_right::after{
+  bottom: -6px;
+  box-shadow: 0 4px 4px #d8d8d8 inset;
+}
+.wjs_product .ticket_left{
+  overflow: hidden;
+  height: 100%;
+}
+.wjs_product .ticket_left > h3{
+  font-size: 16px;
+  margin-top: 10px;
+}
+.wjs_product .ticket_left > div{
+  font-size: 12px;
 }
