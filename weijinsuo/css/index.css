@@ -55,6 +55,33 @@ a,a:hover{
 .wjs_icon_news04::before{
   content: "\e911";
 }
+.wjs_icon_partner01::before{
+	content: "\e946";
+}
+.wjs_icon_partner02::before{
+	content: "\e92f";
+}
+.wjs_icon_partner03::before{
+	content: "\e92e";
+}
+.wjs_icon_partner04::before{
+	content: "\e92a";
+}
+.wjs_icon_partner05::before{
+	content: "\e929";
+}
+.wjs_icon_partner06::before{
+	content: "\e931";
+}
+.wjs_icon_partner07::before{
+	content: "\e92c";
+}
+.wjs_icon_partner08::before{
+	content: "\e92b";
+}
+.wjs_icon_partner09::before{
+	content: "\e92d";
+}
 /*-----------------------------顶部---------------------------------*/
 .wjs_topBar{
 	border-bottom: 1px solid #ccc;
@@ -271,7 +298,6 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
 }
 /*--------------------------------wjs_product-----------------------------------*/
 .wjs_product{
-  height: 500px;
   padding: 20px 0;
   background: #f5f5f5;
   border-bottom: 1px solid #ccc;
@@ -418,7 +444,8 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
 }
 /*--------------------------------------wjs_news---------------------------------*/
 .wjs_news{
-  margin-top: 40px;
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc;
 }
 .wjs_news h3{
   position: relative;
@@ -439,8 +466,16 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
   border-radius: 50%;
 }
 /*-----------------------------------*/
+.wjs_news .wjs_news_line{
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	border-left: 1px dashed #ccc;
+	left: 45px;
+	top: 0;
+}
 .wjs_news .nav-tabs {
-  border-bottom: 1px solid #ddd;
+  border-bottom: none;
 }
 .wjs_news .nav-tabs > li {
   float: left;
@@ -457,6 +492,9 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
   font-size: 30px;   /*span元素30px*30px，内容区30px*40px*/
   color: #fff;
   background: #ccc;
+}
+.wjs_news .nav-tabs > li:last-child > a{
+	margin-bottom: 0;
 }
 .wjs_news .nav-tabs > li > a:hover {
   border-color: #eee #eee #ddd;
@@ -512,4 +550,43 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
   .wjs_news .nav-tabs.nav-justified > .active > a:focus {
     border-bottom-color: #fff;
   }
+}
+@media (min-width: 768px) and (max-width: 992px){
+	.wjs_news .nav-tabs > li > a{
+		margin: 30px 50px;
+	}
+}
+@media (max-width: 768px){
+	.wjs_news .nav-tabs > li{
+		width: 25%;
+	}
+	.wjs_news .nav-tabs > li > a{
+		margin: 30px auto;
+	}
+}
+.wjs_news .tab-content > #news01 > ul{
+	list-style: none;
+}
+.wjs_news .tab-content > #news01 > ul > li{}
+.wjs_news .tab-content > #news01 > ul > li > a{
+	display: block;
+    padding: 15px 0;
+	color: #666;
+}
+/*---------------------------------------footer-------------------------------------*/
+.wjs_partner{
+	padding: 50px 0;   /*加padding更好，可以设置背景*/
+}
+.wjs_partner ul{
+	list-style: none;
+	text-align: center;
+	padding: 0;
+}
+.wjs_partner ul > li{
+	display: inline-block;
+}
+.wjs_partner ul > li > a{
+	display: block;
+	font-size: 70px;
+    padding: 0 15px;
 }
